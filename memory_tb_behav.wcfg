@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="memory_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="memory_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="80.001 ns"></ZoomEndTime>
+      <Cursor1Time time="66.055 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="117"></NameColumnWidth>
+      <ValueColumnWidth column_width="77"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/memory_tb/address" type="array">
+      <obj_property name="ElementShortName">address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">address[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/write" type="logic">
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_00" type="array">
+      <obj_property name="ElementShortName">port_out_00[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_00[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_01" type="array">
+      <obj_property name="ElementShortName">port_out_01[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_01[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_02" type="array">
+      <obj_property name="ElementShortName">port_out_02[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_02[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_03" type="array">
+      <obj_property name="ElementShortName">port_out_03[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_03[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_04" type="array">
+      <obj_property name="ElementShortName">port_out_04[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_04[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_05" type="array">
+      <obj_property name="ElementShortName">port_out_05[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_05[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_06" type="array">
+      <obj_property name="ElementShortName">port_out_06[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_06[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_07" type="array">
+      <obj_property name="ElementShortName">port_out_07[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_07[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_08" type="array">
+      <obj_property name="ElementShortName">port_out_08[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_08[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_09" type="array">
+      <obj_property name="ElementShortName">port_out_09[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_09[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_10" type="array">
+      <obj_property name="ElementShortName">port_out_10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_10[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_11" type="array">
+      <obj_property name="ElementShortName">port_out_11[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_11[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_12" type="array">
+      <obj_property name="ElementShortName">port_out_12[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_12[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_13" type="array">
+      <obj_property name="ElementShortName">port_out_13[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_13[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_14" type="array">
+      <obj_property name="ElementShortName">port_out_14[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_14[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memory_tb/port_out_15" type="array">
+      <obj_property name="ElementShortName">port_out_15[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_out_15[7:0]</obj_property>
+   </wvobject>
+</wave_config>
