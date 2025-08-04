@@ -66,7 +66,7 @@ module datapath(
         .Result(ALU_Result),
         .NZVC(NZVC),
         .In1(A),
-        .In2(Bus2),
+        .In2(Bus1),
         .ALU_Sel(ALU_Sel)
      );
      
