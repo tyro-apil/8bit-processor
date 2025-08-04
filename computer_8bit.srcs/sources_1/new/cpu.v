@@ -47,7 +47,8 @@ module cpu(
         .PC_Inc(PC_Inc),
         .A_Load(A_Load),
         .B_Load(B_Load),
-        .CCR_Load(CCR_Load)
+        .CCR_Load(CCR_Load),
+        .write(write)
     );
     
     datapath DP(
