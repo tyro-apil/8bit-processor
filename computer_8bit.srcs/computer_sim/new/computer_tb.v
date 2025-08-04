@@ -21,46 +21,49 @@
 
 module computer_tb;
 
-    // Declare testbench signals
+    // Inputs
     reg clock;
     reg reset;
-
-    // Instantiate the Device Under Test (DUT) - the top-level 'computer' module
-    computer DUT (
+    
+    // Instantiate the Unit Under Test (UUT)
+    computer uut (
         .clock(clock),
         .reset(reset)
     );
-
+    
     // Clock generation
-    initial begin
-        clock = 0;
-        forever begin
-            #5 clock = ~clock;
-        end
+    always begin
+        #5 clock = ~clock;
     end
-
-    // Initial block for stimulus generation
+    
     initial begin
-        // Initialize signals
-        reset = 1;    
-
-        // Apply reset sequence
-        #5; 
+        // Initialize Inputs
+        clock = 0;
         reset = 0;
-
-        // Monitor signals (you can add more signals to monitor as needed)
-        // This example monitors the CPU's address and data_cpu2mem, and the memory's data_out
-        $monitor("Time=%0t | Reset=%b | Clock=%b | CPU_Address=%h | CPU_To_Memory=%h | MEM_Data_Out=%h | IR=%h | A=%h | B=%h | NZVC=%b", 
-                 $time, reset, clock, DUT.CPU.address, DUT.CPU.to_memory, DUT.MEMORY.data_out, 
-                 DUT.CPU.DP.IR, DUT.CPU.DP.A, DUT.CPU.DP.B, DUT.CPU.DP.CCR_Result);
-
-        // Add specific test scenarios here
-        // For example, let the processor run for a certain number of clock cycles
-        #500;
-
+        
+        // Wait 100 ns for global reset to finish
+        #100;
+        
+        // Release reset
+        reset = 1;
+        
+        // Run for enough cycles to execute all instructions
+        // Each instruction takes several clock cycles to complete
+        // Let's allow 100 clock cycles (20ns each) = 2000ns
+        #2000;
+        
         // End simulation
+        $display("Test completed");
         $finish;
     end
-
+    
+    // Monitor memory writes to observe results
+    always @(posedge clock) begin
+        if (uut.MEMORY.write && uut.MEMORY.address == 8'h80) begin
+            $display("Memory write detected at address 80h: Data = %h", uut.MEMORY.data_in);
+            $display("Expected result of AA + 55 = FF");
+        end
+    end
+    
 endmodule
 
