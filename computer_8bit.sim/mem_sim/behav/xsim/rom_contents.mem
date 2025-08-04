@@ -1,0 +1,6 @@
+86 // LDA_IMM
+AA // operand
+87 // LDA_DIR
+E0 // operand
+20 // BRA
+00 // operand
