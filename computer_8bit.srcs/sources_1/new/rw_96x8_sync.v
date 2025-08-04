@@ -37,6 +37,7 @@ module rw_96x8_sync(
     end
     
     always @(posedge clock) begin
+//        EN <= ((address >= 128) && (address <= 223));
         if (write && EN)
             RW[address] <= data_in;
         else if (!write && EN)
