@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="computer_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="computer_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="130"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wave_markers>
+      <marker time="165000" label="" />
+      <marker time="235000" label="" />
+      <marker time="285000" label="" />
+      <marker time="355000" label="" />
+      <marker time="465000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/computer_tb/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/PC" type="array">
+      <obj_property name="ElementShortName">PC[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/IR" type="array">
+      <obj_property name="ElementShortName">IR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">IR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/MAR" type="array">
+      <obj_property name="ElementShortName">MAR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MAR[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/address" type="array">
+      <obj_property name="ElementShortName">address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">address[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/to_memory" type="array">
+      <obj_property name="ElementShortName">to_memory[7:0]</obj_property>
+      <obj_property name="ObjectShortName">to_memory[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/write" type="logic">
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/from_memory" type="array">
+      <obj_property name="ElementShortName">from_memory[7:0]</obj_property>
+      <obj_property name="ObjectShortName">from_memory[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/A" type="array">
+      <obj_property name="ElementShortName">A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/B" type="array">
+      <obj_property name="ElementShortName">B[7:0]</obj_property>
+      <obj_property name="ObjectShortName">B[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/CCR_Result" type="array">
+      <obj_property name="ElementShortName">CCR_Result[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CCR_Result[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/ALU_Result" type="array">
+      <obj_property name="ElementShortName">ALU_Result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_Result[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/Bus1" type="array">
+      <obj_property name="ElementShortName">Bus1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Bus1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/Bus2" type="array">
+      <obj_property name="ElementShortName">Bus2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Bus2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/Bus1_Sel" type="array">
+      <obj_property name="ElementShortName">Bus1_Sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Bus1_Sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/Bus2_Sel" type="array">
+      <obj_property name="ElementShortName">Bus2_Sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Bus2_Sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/IR_Load" type="logic">
+      <obj_property name="ElementShortName">IR_Load</obj_property>
+      <obj_property name="ObjectShortName">IR_Load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/MAR_Load" type="logic">
+      <obj_property name="ElementShortName">MAR_Load</obj_property>
+      <obj_property name="ObjectShortName">MAR_Load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/A_Load" type="logic">
+      <obj_property name="ElementShortName">A_Load</obj_property>
+      <obj_property name="ObjectShortName">A_Load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/computer_tb/uut/CPU/DP/B_Load" type="logic">
+      <obj_property name="ElementShortName">B_Load</obj_property>
+      <obj_property name="ObjectShortName">B_Load</obj_property>
+   </wvobject>
+</wave_config>
