@@ -200,16 +200,13 @@ module control_unit(
             S_LDA_DIR_6: next_state = S_LDA_DIR_7;
             S_LDA_DIR_7: next_state = S_LDA_DIR_8;
             S_LDA_DIR_8: next_state = S_FETCH_0;
-//            S_LDA_DIR_8: next_state = S_LDA_DIR_9;
-//            S_LDA_DIR_9: next_state = S_FETCH_0;
 
             // STA_DIR Instruction Sequence
             S_STA_DIR_4: next_state = S_STA_DIR_5;
             S_STA_DIR_5: next_state = S_STA_DIR_6;
             S_STA_DIR_6: next_state = S_STA_DIR_7;
-            S_STA_DIR_7: next_state = S_FETCH_0;
-//            S_STA_DIR_7: next_state = S_STA_DIR_8;
-//            S_STA_DIR_8: next_state = S_FETCH_0;
+            S_STA_DIR_7: next_state = S_STA_DIR_8;
+            S_STA_DIR_8: next_state = S_FETCH_0;
 
             // LDB_IMM Instruction Sequence
             S_LDB_IMM_4: next_state = S_LDB_IMM_5;
@@ -222,16 +219,13 @@ module control_unit(
             S_LDB_DIR_6: next_state = S_LDB_DIR_7;
             S_LDB_DIR_7: next_state = S_LDB_DIR_8;
             S_LDB_DIR_8: next_state = S_FETCH_0;
-//            S_LDB_DIR_8: next_state = S_LDB_DIR_9;
-//            S_LDB_DIR_9: next_state = S_FETCH_0;
 
             // STB_DIR Instruction Sequence
             S_STB_DIR_4: next_state = S_STB_DIR_5;
             S_STB_DIR_5: next_state = S_STB_DIR_6;
             S_STB_DIR_6: next_state = S_STB_DIR_7;
-            S_STB_DIR_7: next_state = S_FETCH_0;
-//            S_STB_DIR_7: next_state = S_STB_DIR_8;
-//            S_STB_DIR_8: next_state = S_FETCH_0;
+            S_STB_DIR_7: next_state = S_STB_DIR_8;
+            S_STB_DIR_8: next_state = S_FETCH_0;
 
             // BRA (Branch Always) Instruction Sequence
             S_BRA_4: next_state = S_BRA_5;
@@ -256,17 +250,17 @@ module control_unit(
             S_COND_BR_6: next_state = S_FETCH_0;
 
             // Arithmetic/Logic Instruction Sequences (A = A op B)
-            S_ADD_AB_4: next_state = S_ADD_AB_5;
-            S_ADD_AB_5: next_state = S_FETCH_0;
+            S_ADD_AB_4: next_state = S_FETCH_0;
+//            S_ADD_AB_5: next_state = S_FETCH_0;
 
-            S_SUB_AB_4: next_state = S_SUB_AB_5;
-            S_SUB_AB_5: next_state = S_FETCH_0;
+            S_SUB_AB_4: next_state = S_FETCH_0;
+//            S_SUB_AB_5: next_state = S_FETCH_0;
 
-            S_AND_AB_4: next_state = S_AND_AB_5;
-            S_AND_AB_5: next_state = S_FETCH_0;
+            S_AND_AB_4: next_state = S_FETCH_0;
+//            S_AND_AB_5: next_state = S_FETCH_0;
 
-            S_OR_AB_4: next_state = S_OR_AB_5;
-            S_OR_AB_5: next_state = S_FETCH_0;
+            S_OR_AB_4: next_state = S_FETCH_0;
+//            S_OR_AB_5: next_state = S_FETCH_0;
 
             
 
@@ -324,13 +318,14 @@ module control_unit(
                             end
                             
             S_LDA_IMM_5:    begin
+                            
+                            end
+                            
+            S_LDA_IMM_6:    begin
                             // PC <- PC + 1; A <- Immediate Operand
                             PC_Inc = 1;
                             A_Load = 1;
                             Bus2_Sel = BUS2_FROM_MEMORY;
-                            end
-                            
-            S_LDA_IMM_6:    begin
                            
                             end
                             
@@ -342,23 +337,29 @@ module control_unit(
                             end
                             
             S_LDA_DIR_5:    begin
+                            
+                            end
+                            
+            S_LDA_DIR_6:    begin
                             // PC <- PC + 1; MAR <- Address
                             PC_Inc = 1;
                             MAR_Load = 1;
                             Bus2_Sel = BUS2_FROM_MEMORY;
-                            end
                             
-            S_LDA_DIR_6:    begin
-                            // Wait state
                             end
                             
             S_LDA_DIR_7:    begin
+                            // Wait state
+                            
+                            end
+                            
+            S_LDA_DIR_8:    begin
                             // A <- RW[Address]
                             A_Load = 1;
                             Bus2_Sel = BUS2_FROM_MEMORY;
                             end
                             
-            S_LDA_DIR_8:    begin
+            S_LDA_DIR_9:    begin
                             
                             end
                             
@@ -370,19 +371,23 @@ module control_unit(
                             end
                             
             S_STA_DIR_5:    begin
+                            
+                            end
+                            
+            S_STA_DIR_6:    begin
                             // MAR <- Address
                             PC_Inc = 1;
                             MAR_Load = 1;
                             Bus2_Sel = BUS2_FROM_MEMORY;
                             end
                             
-            S_STA_DIR_6:    begin
+            S_STA_DIR_7:    begin
                             // RW[Address] <- A
                             Bus1_Sel = BUS1_A;
                             write = 1;
                             end
                             
-            S_STA_DIR_7:    begin
+            S_STA_DIR_8:    begin
                             
                             end
                             
@@ -396,14 +401,14 @@ module control_unit(
                             end
                             
             S_LDB_IMM_5:    begin
-                            // PC <- PC + 1; B <- Immediate Operand
-                            PC_Inc = 1;
-                            B_Load = 1;
-                            Bus2_Sel = BUS2_FROM_MEMORY;
+
                             end
                             
             S_LDB_IMM_6:    begin
-                           
+                            // PC <- PC + 1; B <- Immediate Operand
+                            PC_Inc = 1;
+                            B_Load = 1;
+                            Bus2_Sel = BUS2_FROM_MEMORY;                           
                             end
                             
             S_LDB_DIR_4:    begin
@@ -414,23 +419,27 @@ module control_unit(
                             end
                             
             S_LDB_DIR_5:    begin
+                            
+                            end
+                            
+            S_LDB_DIR_6:    begin
                             // PC <- PC + 1; MAR <- Address
                             PC_Inc = 1;
                             MAR_Load = 1;
                             Bus2_Sel = BUS2_FROM_MEMORY;
                             end
                             
-            S_LDB_DIR_6:    begin
+            S_LDB_DIR_7:    begin
                             // Wait state
                             end
                             
-            S_LDB_DIR_7:    begin
+            S_LDB_DIR_8:    begin
                             // B <- RW[Address]
                             B_Load = 1;
                             Bus2_Sel = BUS2_FROM_MEMORY;
                             end
-                            
-            S_LDB_DIR_8:    begin
+            
+            S_LDB_DIR_9:    begin
                             
                             end
                             
@@ -442,19 +451,23 @@ module control_unit(
                             end
                             
             S_STB_DIR_5:    begin
+                            
+                            end
+                            
+            S_STB_DIR_6:    begin
                             // MAR <- Address
                             PC_Inc = 1;
                             MAR_Load = 1;
                             Bus2_Sel = BUS2_FROM_MEMORY;
                             end
                             
-            S_STB_DIR_6:    begin
+            S_STB_DIR_7:    begin
                             // RW[Address] <- B
                             Bus1_Sel = BUS1_B;
                             write = 1;
                             end
                             
-            S_STB_DIR_7:    begin
+            S_STB_DIR_8:    begin
                             
                             end
                             
@@ -468,13 +481,13 @@ module control_unit(
                         end
                         
             S_BRA_5:    begin
-                        // PC <- Address
-                        Bus2_Sel = BUS2_FROM_MEMORY;
-                        PC_Load = 1;
+                        
                         end
                         
             S_BRA_6:    begin
-                        
+                        // PC <- Address
+                        Bus2_Sel = BUS2_FROM_MEMORY;
+                        PC_Load = 1;
                         end
                         
             S_COND_BR_4:    begin
@@ -484,6 +497,10 @@ module control_unit(
                             end
                             
             S_COND_BR_5:    begin
+                            
+                            end
+                            
+            S_COND_BR_6:    begin
                             case (IR)
                                 BEQ: if (CCR_Result[2] == 1) PC_Load = 1; // Z=1
                                 BNE: if (CCR_Result[2] == 0) PC_Load = 1; // Z=0
@@ -498,45 +515,64 @@ module control_unit(
                             if (PC_Load)
                                 Bus2_Sel = BUS2_FROM_MEMORY;
                             end
-                            
-            S_COND_BR_6:    begin
-                            
-                            end
             
             
             // -- ALU Operations --                
             S_ADD_AB_4:     begin
                             ALU_Sel = ALU_ADD_SEL;
                             Bus1_Sel = BUS1_B;
-                            end
                             
-            S_ADD_AB_5:     begin
                             Bus2_Sel = BUS2_ALU_RESULT;
                             A_Load = 1;
                             CCR_Load = 1;
                             end
+                            
+            S_ADD_AB_5:     begin
+                            
+                            end
+                            
+//            S_ADD_AB_6:     begin
+                            
+//                            end
                             
             S_SUB_AB_4:     begin
                             ALU_Sel = ALU_SUB_SEL;
                             Bus1_Sel = BUS1_B;
-                            end
                             
-            S_SUB_AB_5:     begin
                             Bus2_Sel = BUS2_ALU_RESULT;
                             A_Load = 1;
                             CCR_Load = 1;
+                            end
+                            
+            S_SUB_AB_5:     begin
+                            
                             end
                             
             S_AND_AB_4:     begin
                             ALU_Sel = ALU_AND_SEL;
                             Bus1_Sel = BUS1_B;
-                            end
                             
-            S_AND_AB_5:     begin
                             A_Load = 1;
                             Bus2_Sel = BUS2_ALU_RESULT;
                             CCR_Load = 1;
                             end
+                            
+            S_AND_AB_5:     begin
+                            
+                            end
+                            
+            S_OR_AB_4:     begin
+                           ALU_Sel = ALU_OR_SEL;
+                           Bus1_Sel = BUS1_B;
+                            
+                           A_Load = 1;
+                           Bus2_Sel = BUS2_ALU_RESULT;
+                           CCR_Load = 1;
+                           end
+                            
+            S_OR_AB_5:     begin
+                            
+                           end
                             
             default:        begin
                             
