@@ -122,7 +122,7 @@ module datapath(
     always @ (posedge clock or negedge reset) 
         begin: CONDITION_CODE_REGISTER 
             if (!reset) 
-                CCR_Result <= 8'h00; 
+                CCR_Result <= 4'h00; 
             else 
             if (CCR_Load) 
                 CCR_Result <= NZVC; 
